@@ -1,13 +1,14 @@
 {
   "pages": [
-   "pages/archive/archive",
+   "pages/companyCredit/companyCredit",
+    "pages/archive/archive",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "信用档案",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

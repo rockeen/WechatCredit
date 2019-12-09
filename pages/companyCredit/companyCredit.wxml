@@ -1,0 +1,64 @@
+<!--pages/companyCredit.wxml-->
+<view class="page">
+
+  <view class="headView">
+    <view class="basic_tit_logo">
+      <image class="imgSource" src="{{userMd.imgSource}}"> </image>
+      <!-- <image class="eyeImage" src=""> </image> -->
+      <text class="headView_viewcount">{{userMd.viewcount}}次</text>
+
+
+    </view>
+    <view class="basic_tit">
+
+      <text class="headView_companyName">{{userMd.realName}}</text>
+      <view class="xingzhi">
+        <text class="headView_companyclass"> {{qiyeleixing}}  </text>
+        <text class="headView_companyfapiao">发票信息</text>
+        <text class="headView_companystate">续存</text>
+      </view>
+
+      <view class="xingzhi">
+        <text class="headView_companydengji">信用等级：</text>
+        <text class="headView_companydengji"> {{creditRating?creditRating:'-'}}</text>
+        <text class="headView_companyfenzhi">信用分值：</text>
+        <text class="headView_companyfenzhi">{{fraction?fraction:'-'}}</text>
+
+      </view>
+      <view class="bianma">
+
+        <text class="headView_companybianma">信用编码：</text>
+        <text class="headView_companybianma">{{userMd.bh?userMd.bh:'-'}}</text>
+      </view>
+    </view>
+    <view class="lixin">
+      <image class="lixinImage" src="../../images/linxin.png">
+      </image>
+      <text class="year">第一年</text>
+    </view>
+
+
+
+  </view>
+      <view class="botton_three">
+      <view class="time">
+        <text class="headView_creatTimet">成立时间</text>
+        <text class="headView_creatTime">{{userMd.setupDate?userMd.setupDate:'-'}}</text>
+      </view>
+      <view class="line"></view>
+
+      <view class="monney">
+        <text class="headView_monneyt">注册资金</text>
+        <text class="headView_monney">{{userMd.registerFundmoneyUnit?userMd.registerFundmoneyUnit:'-'}}</text>
+      </view>
+       <view class="line"></view>
+
+      <view class="people">
+        <text class="headView_peoplet">法定代表人</text>
+        <text class="headView_people">{{userMd.linkMan?userMd.linkMan:'-'}}</text>
+      </view>
+
+    </view>
+    <view class="foot"></view>
+
+</view>
