@@ -15,7 +15,14 @@
       <view class="xingzhi">
         <text class="headView_companyclass"> {{qiyeleixing}}  </text>
         <text class="headView_companyfapiao">发票信息</text>
-        <text class="headView_companystate">续存</text>
+        <text class="headView_companystate" wx:if="{{userMd.revokeState==0}}">续存</text>
+         <text class="headView_companystate" wx:else if="{{userMd.revokeState==1}}">已吊销</text>
+          <!-- <text class="headView_companystate" wx:else if="{{userMd.revokeState==2}}">已注销</text> -->
+           <!-- <text class="headView_companystate" wx:else if="{{userMd.revokeState==3}}">歇业</text>
+            <text class="headView_companystate" wx:else if="{{userMd.revokeState==4}}">虚假企业</text>
+             <text class="headView_companystate" wx:else if="{{userMd.revokeState==5}}">经营异常</text>
+              <text class="headView_companystate" wx:else if="{{userMd.revokeState==6}}">拟吊销</text>
+               <text class="headView_companystate" wx:else ="{{userMd.revokeState==9}}">其它</text> -->
       </view>
 
       <view class="xingzhi">
@@ -59,6 +66,90 @@
       </view>
 
     </view>
-    <view class="foot"></view>
+
+<view class="my">
+    <view class="my-itemOne flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_phone_ic.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text class="dianhua">{{userMd.phone}}</text>
+      </view>
+      <text class="kaiguan" bindtap="shouqi">{{shouqit}}</text>
+
+             <image class="jiantouOne" src="{{sanjiao}}" bindtap="shouqi"></image>
+
+    </view>
+
+     <view class="my-item flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_phone_ic.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>{{userMd.fax}}</text>
+      </view>
+             <image class="jiantou" src="../../images/more-left.png"></image>
+
+    </view>
+    <view class="my-item flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_fax_ic.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>{{userMd.email}}</text>
+      </view>
+       <image class="jiantou" src="../../images/more-left.png"></image>
+
+    </view>
+    <view class="my-item flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_fax_ic.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>{{userMd.webSite}}</text>
+      </view>
+             <image class="jiantou" src="../../images/more-left.png"></image>
+
+    </view>
+    <view class="my-item flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_gps_ic.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>{{userMd.address}}</text>
+      </view>
+             <image class="jiantou" src="../../images/more-left.png"></image>
+
+    </view>
+    <view class="my-item-mainProduct flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_product_ic.png"></image>
+      </view>
+        <text class="mainProduct">{{userMd.mainProduct}}</text>
+    </view>
+    <view class="my-item-mainProduct flex-wrp" hidden="{{isShow}}">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/archives_introduce_ic.png"></image>
+      </view>
+        <text class="mainProduct">{{userMd.information}}</text>
+    </view>
+  </view>
+
+          <view class="section" wx:for="{{appList}}" >
+            <view class="section__title" >
+            <text class="section__titleText"> {{item.showTitle}}</text>
+            </view>
+            <view class="section-flex-wrp" style="flex-direction:row;">
+                <view class="section-flex-item" wx:for="{{item.appChilds}}" wx:for-index="idx" wx:for-item="itemName">
+                <text class="section-flex-item-num" space="ensp">{{itemName.count?itemName.count:' '}}</text>
+                <view class="section-flex-item-imageView">
+                <image class="section-flex-item-image" src="../../images/{{itemName.image}}.png"></image>
+                </view>        
+                <text class="section-flex-item-title"  >{{itemName.showTitle}}</text>
+                </view>
+
+            </view>
+        </view>
+
 
 </view>

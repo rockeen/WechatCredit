@@ -181,3 +181,156 @@ background:#eaeaea;
   margin-top: 5px;
 
 }
+.lineRow{
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+  margin-top: 5px;
+
+}
+.my{
+  margin: 8px 0 0 0;
+}
+.my-item{
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-bottom:0.5px; 
+  height: 46px;
+}
+.my-itemOne{
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-bottom:1px; 
+  height: 46px;
+}
+.myitem-icon{
+  flex: 1;
+  padding-left:15px; 
+}
+.myitem-icon image{
+  width: 15px;
+  height: 15px;
+  padding: 15px 0;
+  
+}
+.myitem-name{
+  padding-left:10px;
+  font-size: 14px;
+  /* color: #6d6d6d; */
+  padding: 15px 0;
+  flex: 10;
+}
+.mainProduct{
+padding-left:10px;
+padding-right:30px;
+padding-top:10px;
+margin-bottom: 10px;
+font-size: 14px;
+text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  align-content: center;
+
+}
+.my-item-mainProduct{
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-bottom:1px; 
+  height: 82px;
+}
+
+.dianhua{
+  padding-left:10px;
+  font-size: 14px;
+  color: #08C06C;
+  padding: 15px 0;
+  flex: 8;
+}
+.jiantou{
+  width: 6px;
+  height: 10px;
+  padding-right:20px; 
+  padding-top:20px
+}
+.kaiguan{
+  margin-right:10px; 
+  text-align: left;
+  font-size: 14px;
+  color: #6d6d6d;
+  padding: 15px 0;
+}
+.jiantouOne{
+  width: 12px;
+  height: 8px;
+  padding-right:20px; 
+  padding-top:20px
+}
+.section{
+  display: flex;
+  flex-direction: column;
+  margin-top:8px; 
+ flex-wrap:wrap;
+}
+.section__title{
+  height: 35px;
+  background-color:#ffff;
+  padding-top:15px;
+
+}
+.section__titleText{
+  font-size: 16px;
+  padding-left:15px;
+
+}
+.section-flex-wrp{
+  margin-top:1px;
+  background-color:#ffff;
+   display: flex;
+  flex-direction: row-reverse;
+  flex-wrap:wrap;
+}
+.section-flex-item{
+
+  border-right-width:0.5rpx;
+  border-bottom-width:0.5rpx;
+  border-top-width:0rpx;
+  border-left-width:0rpx;
+  box-sizing: border-box;
+  border-right-color:#f0f0f0;
+  border-bottom-color:#f0f0f0;
+  border-style: solid;
+  width: 25%;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  background-color:#ffff;
+}
+.section-flex-item-image{
+  width: 23px;
+  height: 23px;
+  padding-left:40%;
+
+}
+.section-flex-item-num{
+  padding-right:10px;
+    padding-top:5px;
+
+  text-align: right;
+  color: #08C06C;
+  font-size: 12px;
+
+
+}
+.section-flex-item-title{
+  font-size: 13px;
+  margin-top:2px;
+  text-align: center;
+
+}
+
