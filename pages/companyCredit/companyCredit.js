@@ -27,11 +27,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // getCompanyCredit('00000651').then(
-
-    // );
     var that = this
-
     wx.request({
       url: 'https://api.11315.com/webApp/index3/00000651', //仅为示例，并非真实的接口地址
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT(值必须为大写)
@@ -43,7 +39,7 @@ Page({
           for (var child in res.data.mapResult.appList[p].appChilds) {
             for (var imageNum in that.data.imageData) {
               // console.log(that.data)
-              console.log(res.data.mapResult.appList[p].appChilds[child])
+              // console.log(res.data.mapResult.appList[p].appChilds[child])
 
               if (that.data.imageData[imageNum].archiveTypeId == res.data.mapResult.appList[p].appChilds[child].archiveTypeId){
                 res.data.mapResult.appList[p].appChilds[child].image = that.data.imageData[imageNum].image;
